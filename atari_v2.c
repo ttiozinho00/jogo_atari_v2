@@ -53,7 +53,7 @@ void inicializar_arena()
         {
             if (i == 0 || i == LINHAS - 1 || (j == 0 && (i < 6 || i >= 14)) || (j == COLUNAS - 1 && (i < 6 || i >= 14))) 
             {
-                arena[i][j] = ''; /*Paredes e buracos*/ 
+                arena[i][j] = '='; /*Paredes e buracos*/ 
             } 
 
             else 
