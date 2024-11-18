@@ -2,29 +2,32 @@
 #ifndef FUNCOES_H
 #define FUNCOES_H
 
-#include <windows.h>
-
 /* Constantes */
 #define ALTURA 20
 #define LARGURA 40
-#define TAM_BURACO 8
+/* Caracteres ASCII para bordas */
+#define BORDA_HORINZONTAL 205
+#define BORDA_VERTICAL 186
+#define CANTO_SUPERIOR_ESQ 201
+#define CANTO_SUPERIOR_DIR 187
+#define CANTO_INFERIOR_ESQ 200
+#define CANTO_INFERIOR_DIR 188
 
-/* VariÃ¡veis globais */
-extern char campo[ALTURA][LARGURA];
-extern int tab_esq, tab_dir;
+/* Variáveis globais */
+extern unsigned char arena[ALTURA][LARGURA];
+extern int tabua_esq, tabua_dir;
 extern int bola_x, bola_y;
-extern int dir_x, dir_y;
-extern int atraso_tab, atraso_bola;
+extern int dx, dy;
 extern int vel_tabu, vel_bola;
 
-/* FunÃ§Ãµes */
+/* Protótipos das funções */
 void esconderCursor();
-void moverCursor(int, int);
-void mudarCor(int);
+void moverCursor(int x, int y);
+void mudarCor(int cor);
 void criarCampo();
+void atualizarArena();
 void mostrarCampo();
 void ajustarTabelas();
 void movimentarBola();
 
 #endif
-
