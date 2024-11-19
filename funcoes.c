@@ -76,10 +76,10 @@ void criarCampo()
     }
 
     // Configura posições iniciais das tábuas e da bola
-    tabua_esq = 8;
-    tabua_dir = 8;
-    bola_x = 10;
-    bola_y = 20;
+     tabua_esq = ALTURA / 2 - 1;
+    tabua_dir = ALTURA / 2 - 1;
+    bola_x = ALTURA / 2;
+    bola_y = LARGURA / 2;
 
     /*Define direção inicial da bola (aleatória)*/ 
     dx = (rand() % 2) * 2 - 1; /*Valores possíveis: -1 ou 1*/ 
